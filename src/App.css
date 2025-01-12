@@ -1,0 +1,94 @@
+.btn, .scaling-done-icon{
+
+    display: flex
+;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.done {
+    background-color: rgb(202, 255, 209);
+    border: 2px solid rgb(44, 255, 65);
+    transition: 1s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.not-done {
+    background-color: rgb(205, 233, 255);
+    border: 2px solid rgb(139 171 255);
+    transition: 1s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.text-strike {
+    text-decoration: line-through;margin: 0;
+}
+
+.normal-text {
+    text-decoration: none;margin: 0;
+
+
+}
+
+.scaling-done-icon {
+    margin: 0;
+    color: #2cff41;
+    transition: 0.6s;
+    animation: scaleup 0.6s cubic-bezier(0.58, 0.05, 0, 0.95);
+    
+}
+
+.zero-scaled {
+    margin: 0;
+    transform: scale(0);
+    width: 0%;
+    animation: scaledown 0.6s cubic-bezier(0.58, 0.05, 0, 0.95);
+    
+}
+
+@keyframes scaleup {
+    from {
+        transform: scale(0);
+        width: 0%;
+    }
+
+    to {
+        transform: scale(1);
+        width: 15.5px;
+    }
+}
+@keyframes scaledown {
+    from{
+        width: 15.5px;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+
+@media (max-width:567px)  {
+    .cross{
+        position: absolute;
+    top: -40%;
+    left: 100%;
+    }
+.mobile-flex{
+    flex-direction: column;
+    transform: scale(0.75);
+    position: unset;
+    padding-right: 15px;
+}
+.done,.not-done {
+    padding: 0px 20px;
+position: relative;
+width: 95%;
+}
+}
+
+.react-datepicker-wrapper {
+    width: 100%;}
